@@ -8,4 +8,4 @@ elif lastdigit > 5:
     str = " and is greater than 5"
 elif lastdigit < 6:
     str = " and is less than 6 and not 0"
-print ("Last digit of {} is {} {}".format(number, lastdigit, str))
+print ("Last digit of {} is {}{}".format(number, lastdigit, str))
