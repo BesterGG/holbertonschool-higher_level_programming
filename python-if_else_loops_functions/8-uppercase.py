@@ -8,4 +8,4 @@ def uppercase(str):
             result += chr(ord(c) - 32)
         else:
             result += chr(ord(c))
-    return result
+    print ("{}".format(result))
