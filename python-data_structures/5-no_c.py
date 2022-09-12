@@ -1,3 +1,9 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    return my_string.replace('C', '')
+    lst = []
+    for letter in my_string:
+        lst.append(letter)
+    for i in range(0, len(lst)):
+        if lst[i] == 'C' or lst[i] == 'c':
+            lst[i] = ''
+    return ''.join(lst)
