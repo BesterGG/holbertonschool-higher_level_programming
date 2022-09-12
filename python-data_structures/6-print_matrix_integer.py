@@ -2,7 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     for i in range(0, len(matrix)):
         for n in range(0, len(matrix[i])):
-            if n < len(matrix[n]):
+            if n < len(matrix[n]) - 1:
                 print("{:d}".format(matrix[i][n]), end=' ')
-        if i < len(matrix): 
-            print()
+            else:
+                print("{:d}".format(matrix[i][n]), end='')
+        print()
