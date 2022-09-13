@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # https://stackoverflow.com/questions/27518016/apply-function-on-all-values-of-dictionary
+
+
 def multi(val):
     v = 0
     v = val*2
