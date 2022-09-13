@@ -11,6 +11,8 @@ def reduce(function, iterable, initializer=None):
 
 
 def uniq_add(my_list=[]):
+    if not my_list:
+        return 0
     add = 0
     unique = list(set(my_list))
     add = reduce(lambda x, y: x + y, unique)
