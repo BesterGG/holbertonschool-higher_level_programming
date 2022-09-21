@@ -3,6 +3,7 @@
     Square class created
 """
 class Square:
+    
     """
         empty class
     """
