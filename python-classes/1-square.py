@@ -8,6 +8,6 @@ class Square:
     """
         Create a instance size inside square class
     """
-    def  __init__(self, size):
+    def __init__(self, size):
         """ Size init"""
         self.__size = size
