@@ -6,9 +6,11 @@ class Rectangle:
     """ class attributes """
     __width = None
     __height = None
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """ init function // constructor """
+        Rectangle.number_of_instances += 1
         if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -76,4 +78,5 @@ class Rectangle:
         return s
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

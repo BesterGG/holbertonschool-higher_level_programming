@@ -6,9 +6,12 @@ class Rectangle:
     """ class attributes """
     __width = None
     __height = None
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ init function // constructor """
+        Rectangle.number_of_instances += 1
         if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -21,6 +24,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+        self.print_symbol = Rectangle.print_symbol
 
     @property
     def width(self):
@@ -58,9 +62,10 @@ class Rectangle:
 
     def __str__(self) -> str:
         s = ""
+        ps = str(self.print_symbol)
         if self.__height == 0 or self.__width == 0:
             return ""
-        r = [["#" for i in range(self.__width)] for j in range(self.__height)]
+        r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
             s += "".join(r[i]) + ("\n" if i + 1 != len(r) else "")
         return s
@@ -70,10 +75,12 @@ class Rectangle:
 
     def __print__(self) -> print:
         s = ""
-        r = [["#" for i in range(self.__width)] for j in range(self.__height)]
+        ps = str(self.print_symbol)
+        r = [[ps for i in range(self.__width)] for j in range(self.__height)]
         for i in range(len(r)):
             print("".join(r[i]))
         return s
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
