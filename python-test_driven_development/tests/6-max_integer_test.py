@@ -18,7 +18,7 @@ class Test(unittest.TestCase):
         max = max_integer([-10, -11, -22, -6, -33, -40])
         self.assertEqual(max, -6)
 
-    def negatives_positives(self):
+    def test_negatives_positives(self):
         max = max_integer([-10, -11, -22, -6, -33, 3,-40])
         self.assertEqual(max, 3)
 
