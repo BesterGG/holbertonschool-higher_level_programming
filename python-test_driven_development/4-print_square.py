@@ -10,5 +10,5 @@ def print_square(s):
         raise TypeError("size must be an integer")
     elif s < 0:
         raise ValueError("size must be >= 0")
-    if s is not 0:
+    if s != 0:
         print('\n'.join([''.join('#' * s)] * s))
