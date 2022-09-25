@@ -2,13 +2,14 @@
 """
 Module Rectangle
 """
-    __width = None
-    __height = None
+__width = None
+__height = None
 
 class Rectangle:
     """Define rectangle class"""
 
     def __init__(self, width=0, height=0):
+        """init function"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width < 0:
