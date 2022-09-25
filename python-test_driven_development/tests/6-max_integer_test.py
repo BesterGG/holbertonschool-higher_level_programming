@@ -10,19 +10,19 @@ class Test(unittest.TestCase):
         max = max_integer([0, 1, 2, 3])
         self.assertEqual(max, 3)
 
-    def test_max_int(self):
+    def test_nothing(self):
         max = max_integer([])
         self.assertEqual(max, None)
 
-    def test_max_int(self):
+    def test_negatives(self):
         max = max_integer([-10, -11, -22, -6, -33, -40])
         self.assertEqual(max, -6)
 
-    def test_max_int(self):
+    def negatives_positives(self):
         max = max_integer([-10, -11, -22, -6, -33, 3,-40])
         self.assertEqual(max, 3)
 
-    def test_max_int(self):
+    def test_one_element(self):
         max = max_integer([1])
         self.assertEqual(max, 1)
 
