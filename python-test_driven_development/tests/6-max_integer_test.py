@@ -26,5 +26,9 @@ class Test(unittest.TestCase):
         max = max_integer([1])
         self.assertEqual(max, 1)
 
+    def test_max_beg(self):
+        max = max_integer([1, 0])
+        self.assertEqual(max, 1)
+
 if __name__ == '__main__':
     unittest.main()
