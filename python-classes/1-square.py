@@ -2,10 +2,13 @@
 """ rectangle class """
 
 
+
 class Rectangle:
     """ class attributes """
     __width = None
     __height = None
+
+
 
     def __init__(self, width=0, height=0):
         """ init function // constructor """
