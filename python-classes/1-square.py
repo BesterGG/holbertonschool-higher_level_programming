@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-    Square class created
-"""
+""" class """
 
 
 class Square:
-    """
-        Create a instance size inside square class
-    """
-    def __init__(self, size):
-        """ Size init"""
+    """ class attributes """
+
+    __size = None
+    """ init function """
+    def __init__(self, size) -> None:
         self.__size = size
