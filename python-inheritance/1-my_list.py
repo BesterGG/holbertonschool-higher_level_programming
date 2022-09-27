@@ -4,10 +4,10 @@ Task 1 - Write a class MyList that inherits from list
 """
 
 
-class Mylist(list):
-    """Class Mylist"""
+class MyList(list):
+    """ subclass """
     def print_sorted(self):
-        """Print sorted list"""
+        """ print sorted list """
         sl = self.copy()
         sl.sort()
         print(sl)
