@@ -6,11 +6,11 @@ Using ''printed_sorted''
 
 >>> MyList = __import__('1-my_list').MyList
 
->>> MyList()
+>>> MyList.print_sorted()
 []
 
->>> MyList([11, 3, 1, 5])
-[1, 3, 5, 11]
+>>> MyList.print_sorted([3, 1, 5])
+[1, 3, 5]
 
 >>> MyList(102, 2)
 Traceback (most recent call last):
