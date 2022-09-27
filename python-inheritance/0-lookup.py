@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 0 - Function which return the list of all available 
+Task 0 - Function which return the list of all available
 attributes and methods of an object
 """
 
