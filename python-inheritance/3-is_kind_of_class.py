@@ -7,4 +7,5 @@ instance of a classs that inherited from, the specified class
 
 
 def is_kind_of_class(obj, a_class):
+    """ is kind of class dough"""
     return isinstance(obj, a_class)
