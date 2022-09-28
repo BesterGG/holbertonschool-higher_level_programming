@@ -5,7 +5,7 @@ Task 1 - Write a class MyList that inherits from list
 
 
 class MyList(list):
-    """ subclass """
+    """ subclass mylist"""
     def print_sorted(self):
         """ print sorted list """
         sl = self.copy()
