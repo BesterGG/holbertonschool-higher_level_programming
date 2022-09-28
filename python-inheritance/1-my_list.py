@@ -10,6 +10,5 @@ class MyList(list):
         """ print sorted list """
         sl = self.copy()
         sl.sort()
-        # print(sl)
+        print(sl)
         return sl
-
