@@ -5,7 +5,7 @@ Write a Rectangle class that inherits from BaseGeometry
 SQ = __import__('8-rectangle').Rectangle
 
 
-class Square(Rectangle):
+class Square(SQ):
     """Square"""
 
     def __init__(self, size):
