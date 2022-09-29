@@ -9,5 +9,5 @@ fd = "add_item.json"
 ld = LD(fd) if os.path.exists(fd) else []
 
 for i in sys.argv:
-    ld.append(i)
+    ld.append(sys.argv[i])
 SV(ld, fd)
