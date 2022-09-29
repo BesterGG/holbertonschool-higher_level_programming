@@ -8,6 +8,6 @@ LD = __import__('6-load_from_json_file').load_from_json_file
 fd = "add_item.json"
 ld = LD(fd) if os.path.exists(fd) else []
 
-for i in range(len(sys.argv)):
+for i in sys.argv:
     ld.append(i)
 SV(ld, fd)
