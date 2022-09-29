@@ -2,12 +2,12 @@
 """ load, add, save """
 import sys
 import os.path
-SV = __import__('5-save_to_json_file').save_to_json_file
-LD = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-fd = "add_item.json"
-ld = LD(fd) if os.path.exists(fd) else []
+fp = "add_item.json"
+ls = load_from_json_file(fp) if os.path.exists(fp) else []
 
-for i in sys.argv:
-    ld.append(sys.argv[i])
-SV(ld, fd)
+for i in range(1, len(sys.argv)):
+    ls.append(sys.argv[i])
+save_to_json_file(ls, fp)
