@@ -5,5 +5,4 @@
 def write_file(filename="", text=""):
     """ Writes a string to a text file."""
     with open(filename, "w") as f:
-        f.write(text)
-        return len(text)
+        return f.write(text)
