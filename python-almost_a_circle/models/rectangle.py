@@ -91,6 +91,9 @@ class Rectangle(Base):
         return p + p1
 
     def check_arguments(self, *args, **kwargs):
+        """
+        Checks the arguments
+        """
         if args and kwargs or args:
             return 1
         if kwargs and args is None:
