@@ -91,6 +91,13 @@ class Rectangle(Base):
         return p + p1
 
     def check_arguments(self, *args, **kwargs):
+        """
+        Checks the arguments of the Rectangle
+        """
+        if len(args)!= 1:
+            raise TypeError("x must be an integer")
+        if len(kwargs)!= 1:
+            raise TypeError("y must be an integer")
         if args and kwargs or args:
             return 1
         if kwargs and args is None:
