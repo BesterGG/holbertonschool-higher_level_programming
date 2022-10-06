@@ -69,11 +69,19 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Returns the display of the Rectangle"""
+        for y in range(self.__y):
+            print()
         for i in range(0, self.__height):
+            for x in range(self.__x):
+                print(" " * self.__x, end="")
             for j in range(0, self.__width):
                 print("#", end='')
             print()
+        # """Returns the display of the Rectangle"""
+        # for i in range(0, self.__height):
+        #     for j in range(0, self.__width):
+        #         print("#", end='')
+        #     print()
 
     def __str__(self):
         """Returns the string representation of the Rectangle"""
