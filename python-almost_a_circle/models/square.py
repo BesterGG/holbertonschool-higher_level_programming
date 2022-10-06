@@ -24,3 +24,7 @@ class Square(Rectangle):
             raise ValueError("size must be > 0")
         else:
             self.__size = size
+
+    def __str__(self):
+        """Return string representation of the square"""
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
