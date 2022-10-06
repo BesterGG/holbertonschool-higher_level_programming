@@ -24,3 +24,17 @@ class Square(Rectangle):
     def __str__(self):
         """Return string representation of the square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    def update(self, *args, **kwargs):
+        """Updates the rectangle with the given args"""
+        if args and len(args) > 0:
+            if len(args) >= 2:
+                x = list(args)
+                x.insert(2, args[1])
+                x = tuple(x)
+                args = x
+        else:
+            if 'size' in kwargs.keys():
+                kwargs['width'] = kwargs.pop('size')
+                kwargs['height'] = kwargs['width']
+        super(Square, self).update(*args, **kwargs)
