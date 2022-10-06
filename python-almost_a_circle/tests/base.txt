@@ -1,0 +1,28 @@
+The ``Base`` module
+========================
+
+Using the ``Base`` class
+------------------------
+>>> from models.base import Base
+
+>>> b1 = Base()
+>>> b2 = Base()
+>>> print(b1.id)
+1
+>>> print(b2.id)
+2
+
+>>> b3 = Base(89)
+>>> print(b3.id)
+89
+
+
+>>> b4 = Base()
+>>> b5 = Base()
+>>> b6 = Base(1)
+>>> print(b4.id)
+3
+>>> print(b5.id)
+4
+>>> print(b6.id)
+5
