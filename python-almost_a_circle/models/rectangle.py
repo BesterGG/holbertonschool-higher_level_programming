@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Recntagle class that inherits from Base"""
 
-
+import sys
 from models.base import Base
 
 
@@ -90,16 +90,36 @@ class Rectangle(Base):
         p1 = f" - {self.__width}/{self.__height}"
         return p + p1
 
-    def update(self, *args):
+    def check_arguments(self, *args, **kwargs):
+        if args and kwargs or args:
+            return 1
+        if kwargs and args is None:
+            return 2
+
+    def update(self, *args, **kwargs):
         """Updates the rectangle with the given args"""
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[i]
-            elif i == 1:
-                self.__width = args[i]
-            elif i == 2:
-                self.__height = args[i]
-            elif i == 3:
-                self.__x = args[i]
-            elif i == 4:
-                self.__y = args[i]
+        # if args and kwargs or args is not None:
+        if self.check_arguments(*args, **kwargs) == 1:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.__width = args[i]
+                elif i == 2:
+                    self.__height = args[i]
+                elif i == 3:
+                    self.__x = args[i]
+                elif i == 4:
+                    self.__y = args[i]
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                elif k == "width":
+                    self.__width = v
+                elif k == "height":
+                    self.__height = v
+                elif k == "x":
+                    self.__x = v
+                elif k == "y":
+                    self.__y = v
