@@ -94,10 +94,6 @@ class Rectangle(Base):
         """
         Checks the arguments of the Rectangle
         """
-        if len(args)!= 1:
-            raise TypeError("x must be an integer")
-        if len(kwargs)!= 1:
-            raise TypeError("y must be an integer")
         if args and kwargs or args:
             return 1
         if kwargs and args is None:
@@ -106,7 +102,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Updates the rectangle with the given args"""
         # if args and kwargs or args is not None:
-        if self.check_arguments(*args, **kwargs) == 1:
+        if self.check_arguments() == 1:
             for i in range(len(args)):
                 if i == 0:
                     self.id = args[i]
@@ -118,7 +114,7 @@ class Rectangle(Base):
                     self.__x = args[i]
                 elif i == 4:
                     self.__y = args[i]
-        else:
+        if self.check_arguments() == 2:
             for k, v in kwargs.items():
                 if k == "id":
                     self.id = v
