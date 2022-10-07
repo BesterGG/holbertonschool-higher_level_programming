@@ -126,3 +126,16 @@ class Rectangle(Base):
                     self.__x = v
                 elif k == "y":
                     self.__y = v
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation
+        """
+        collage = {
+            "x": {self.x},
+            "y": {self.y},
+            "id": {self.id},
+            "width": {self.width},
+            "height": {self.height}
+        }
+        return collage
