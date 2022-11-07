@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 ''''
 Select all lists from the database hbtn_0e_0usa
 '''
@@ -37,4 +38,3 @@ if __name__ == "__main__":
     arg_database = args[3]
     all_states = DataBase(arg_user, arg_password, arg_database)
     all_states.print_all_states()
-
