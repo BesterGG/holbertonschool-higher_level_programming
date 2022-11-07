@@ -20,4 +20,4 @@ if __name__ == "__main__":
         .format(argv[4])
         )
     for row in cursor.fetchall():
-            print("{}".format(row))
+        print("{}".format(row))
