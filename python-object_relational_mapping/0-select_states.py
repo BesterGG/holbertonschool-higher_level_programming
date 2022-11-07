@@ -6,7 +6,6 @@ import MySQLdb
 import sys
 
 
-
 class DataBase:
     '''
     Class representing connection to MySQL database
