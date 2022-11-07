@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
-import sys
 ''''
 Select all lists from the database hbtn_0e_0usa
 '''
+import MySQLdb
+import sys
+
 
 
 class DataBase:
