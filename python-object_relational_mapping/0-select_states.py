@@ -7,6 +7,9 @@ Select all lists from the database hbtn_0e_0usa
 
 
 class DataBase:
+    '''
+    Class representing connection to MySQL database
+    '''
     def __init__(self, arg_user, arg_password, arg_database):
         self.user = arg_user
         self.password = arg_password
