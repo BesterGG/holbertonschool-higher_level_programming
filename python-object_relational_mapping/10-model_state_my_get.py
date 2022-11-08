@@ -15,8 +15,7 @@ if __name__ == "__main__":
     session = Session()
     SQ = session.query(State).filter(State.name == argv[4])
 
-    if SQ:
-        for sq in SQ:
-            print(f"{sq.id}")
-    else:
-        print("Not found")
+    for states in SQ:
+        print(f"{states.id}")
+        exit()
+    print('Not found')
