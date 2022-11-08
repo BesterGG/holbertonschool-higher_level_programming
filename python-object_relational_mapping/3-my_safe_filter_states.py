@@ -15,10 +15,9 @@ if __name__ == "__main__":
                     db=argv[3]
                     )
     cursor = db.cursor()
-    arg4 = sys.argv[4]
+    # arg4 = sys.argv[4]
     cursor.execute(
-        "SELECT * FROM states WHERE BINARY name={:s} ORDER BY id ASC"
-        .format(arg4)
+        "SELECT * FROM states WHERE BINARY name= %s ORDER BY id ASC", (argv[4],)
         )
     for row in cursor.fetchall():
         print("{}".format(row))
