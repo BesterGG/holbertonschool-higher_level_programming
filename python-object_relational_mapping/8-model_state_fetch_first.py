@@ -15,7 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    SQ = session.query(State).filter(State.id == 1)
+    SQ = session.query(State).first()
 
-    for state_name in SQ:
-        print("{}: {}".format(state_name.id, state_name.name))
+    if SQ is None:
+        print("Nothing")
+    else:
+        print("{}: {}".format(SQ.id, SQ.name))
