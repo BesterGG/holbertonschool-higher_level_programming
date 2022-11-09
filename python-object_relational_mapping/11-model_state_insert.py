@@ -13,7 +13,11 @@ if __name__ == "__main__":
 
     Session = sessionmaker(engine)
     session = Session()
+
     AddState = State(name = "Louisiana")
     session.add(AddState)
     session.commit()
-    session.close()
+
+    SQ = session.query(State).filter(State.name == "Louisiana")
+    for i in SQ:
+        print(f"{i.id}")
