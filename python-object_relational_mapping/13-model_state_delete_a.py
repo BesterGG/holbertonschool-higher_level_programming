@@ -17,7 +17,8 @@ if __name__ == "__main__":
 
     SQ = session.query(State).all()
     for sq in SQ:
-        if "a" in sq.name:
-            session.delete(sq)        
+        for r in sq.name:
+            if "a" in r:
+                session.delete(sq)        
     session.commit()
     session.close()
