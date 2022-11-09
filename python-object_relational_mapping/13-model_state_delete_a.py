@@ -15,10 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    SQ = session.query(State).all()
+    SQ = session.query(State).filter(State.name.like('%a%'))
     for sq in SQ:
-        for r in sq.name:
-            if "a" in r:
-                session.delete(sq)        
+        session.delete(sq)        
     session.commit()
     session.close()
