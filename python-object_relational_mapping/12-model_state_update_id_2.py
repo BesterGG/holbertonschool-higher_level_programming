@@ -15,8 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    SQ = session.query(State).filter(State.id == 2)
-    for sq in SQ:
-        sq.name = "New Mexico"
+    SQ = session.query(State).filter(State.id == 2).first()
+    SQ.name = "New Mexico"
     session.commit()
     session.close()
