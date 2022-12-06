@@ -6,4 +6,5 @@ const myObject = {
 console.log(myObject);
 // const update_value = Object.assign(myObject, {type: 'object', value: 89});
 myObject.value = 89;
+// myObject['value'] = 99
 console.log(myObject);
