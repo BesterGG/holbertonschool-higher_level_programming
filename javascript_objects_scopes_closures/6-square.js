@@ -14,7 +14,7 @@ class Square extends (SQ) {
       }
     }
     for (let i = 0; i < this.height; i++) {
-      console.log(row)
+      console.log(row);
     }
   }
 }
