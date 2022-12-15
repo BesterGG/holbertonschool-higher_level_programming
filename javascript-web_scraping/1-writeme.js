@@ -5,5 +5,4 @@ const filecontent = process.argv[3];
 
 fs.writeFile(filepath, filecontent, (err) => {
   if (err) throw err;
-    console.log(err);
 });
