@@ -7,7 +7,8 @@ request(url, (error, response, body) => {
     let count = 0;
     for (const v of data) {
       for (const i of v.characters) {
-        if (i === '18/') {
+        const id = i.split('/')[5];
+        if (id === '18') {
           count += 1;
         }
       }
