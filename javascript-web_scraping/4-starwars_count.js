@@ -7,7 +7,7 @@ request(url, (error, response, body) => {
     let count = 0;
     for (const v of data) {
       for (const i of v.characters) {
-        if (i === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (i === '18/') {
           count += 1;
         }
       }
